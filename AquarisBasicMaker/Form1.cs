@@ -61,7 +61,6 @@ namespace AquarisBasicMaker
 
         private void button3_Click(object sender, EventArgs e)
         {
-
             string sCode = "ffffffffffffffffffffffff0023232323232300000000002ad83823234e234611430019e5c5e1b7ed52e5c1e1237eb728fb11b039edb0c300000000000000000000000000000000000000000000000000000000000000000000000000000000";
             byte[] bCode = StringToByteArray(sCode);
             
@@ -141,7 +140,6 @@ namespace AquarisBasicMaker
             folderBrowserDialog1.SelectedPath = textBox2.Text;
             folderBrowserDialog1.ShowDialog();
             textBox2.Text = folderBrowserDialog1.SelectedPath;
-
         }
 
         private void button1_Click(object sender, EventArgs e)
