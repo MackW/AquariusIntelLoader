@@ -85,6 +85,7 @@
             // 
             // button3
             // 
+            this.button3.Enabled = false;
             this.button3.Location = new System.Drawing.Point(335, 105);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(132, 28);
@@ -128,6 +129,7 @@
             this.txtAppName.Name = "txtAppName";
             this.txtAppName.Size = new System.Drawing.Size(100, 20);
             this.txtAppName.TabIndex = 8;
+            this.txtAppName.TextChanged += new System.EventHandler(this.txtAppName_TextChanged);
             // 
             // label3
             // 
