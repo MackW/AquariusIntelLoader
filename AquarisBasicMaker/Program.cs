@@ -39,6 +39,11 @@ namespace AquarisBasicMaker
                     Console.WriteLine("Error in inputs");
                     return;
                 }
+                if (validateFile(sSrc) == false || validatePath(sOut) == false)
+                {
+                    Console.WriteLine("Path or Source not valid");
+                    return;
+                }
                 CAQ.CreateCAQ(sSrc, sOut, sApp);
                 Console.WriteLine("CAQ File Created");
             }
@@ -60,6 +65,14 @@ namespace AquarisBasicMaker
                 return (sIn.Substring(sIn.IndexOf(" ")+1).Trim());
             }
             return "";
+        }
+        private static bool validatePath(string sIn)
+        {
+            return System.IO.Directory.Exists(sIn);
+        }
+        private static bool validateFile(string sIn)
+        {
+            return System.IO.File.Exists(sIn);
         }
     }
 }
