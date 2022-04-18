@@ -5,7 +5,7 @@ internal static class CAQ {
     internal static void CreateCAQ(string SourceFile, string OutputPath, string AppName)
     {
 
-        string sCode = "ffffffffffffffffffffffff0023232323232300000000002ad83823234e234611430019e5c5e1b7ed52e5c1e1237eb728fb11b039edb0c300000000000000000000000000000000000000000000000000000000000000000000000000000000";
+        string sCode = "ffffffffffffffffffffffff0023232323232300000000002ad83823234e234611430019e5c5e1b7ed52e5c1e1237eb728fb11b03909eb09eb03edb8c30000000000000000000000000000000000000000000000000000000000000000000000";
         byte[] bCode = StringToByteArray(sCode);
 
         int iLength = bCode.Length;
@@ -23,8 +23,8 @@ internal static class CAQ {
         }
         bCode[52] = (byte)(int)(bDest / 256);
         bCode[51] = (byte)(bDest - ((int)(bDest / 256)) * 256);
-        bCode[57] = (byte)(int)(bDest / 256);
-        bCode[56] = (byte)(bDest - ((int)(bDest / 256)) * 256);
+        bCode[62] = (byte)(int)(bDest / 256);
+        bCode[61] = (byte)(bDest - ((int)(bDest / 256)) * 256);
         byte[] bPadding = new byte[15];
         int iActualCodeLen = 0;
         int iExtraPadding = 0;
